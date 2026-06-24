@@ -258,9 +258,15 @@
       overflow: hidden; border: 2px solid #C0392B;
     }
     .emergency-banner-img {
-      width: 45%; flex-shrink: 0; height: 100%; min-height: 280px;
+      width: 45%; flex-shrink: 0; height: 100%; min-height: 280px; position: relative;
     }
     .emergency-banner-img img { height: 100%; min-height: 280px; }
+    .emergency-tag {
+      position: absolute; top: 16px; left: 16px;
+      display: inline-block; background: #C0392B; color: #fff;
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      padding: 4px 14px; border-radius: 4px; text-transform: uppercase;
+    }
     .emergency-banner-body {
       flex: 1; padding: 36px 40px;
       background: linear-gradient(135deg, #1a0a0a, #3B0A0A);
@@ -484,6 +490,9 @@
       .hamburger { display: flex; z-index: 1001; position: relative; }
       .nav-right .nav-phone { display: none; }
       .nav-right .nav-btn { display: none; }
+      .nav-right { margin-left: auto; }
+      .nav-logo { left: 50%; transform: translateX(-50%); transition: opacity .25s, transform .25s; }
+      #navbar.logo-hidden .nav-logo { opacity: 0; pointer-events: none; transform: translateX(-50%) scale(.85); }
 
       #hero {
         height: 100svh; min-height: 580px; overflow: hidden;
@@ -491,13 +500,13 @@
                     url('Hero Mobile.png') center 25%/cover no-repeat;
         align-items: flex-end; justify-content: flex-end;
       }
-      #hero .container { flex-direction: column; justify-content: flex-end; align-items: flex-start; padding-top: 0; padding-bottom: 16px; }
+      #hero .container { flex-direction: column; justify-content: flex-end; align-items: flex-start; padding-top: 0; padding-bottom: 116px; gap: 0; }
       .hero-inner { margin-bottom: 0; transform: none; }
-      .hero-badges { flex-direction: row; gap: 16px; margin-top: 20px; }
       .hero-inner h1 { font-size: clamp(36px, 10vw, 56px); }
       .hero-inner h1 .script { font-size: clamp(32px, 9vw, 48px); margin-bottom: 10px; }
       .hero-inner p { font-size: 14px; line-height: 1.55; margin-bottom: 16px; }
-      .hero-badges { gap: 16px; margin-bottom: 20px; }
+      .hero-badges { position: absolute; bottom: 61px; left: 18px; right: 18px; justify-content: center; margin: 0; }
+      .hero-badge { flex: 1; max-width: 110px; }
       .badge-icon { width: 42px; height: 42px; }
       .badge-icon svg { width: 18px; height: 18px; }
       .hero-btns { gap: 8px; }
@@ -530,6 +539,7 @@
 
     @media (max-width: 600px) {
       .services-grid { grid-template-columns: 1fr; }
+      .service-card-img { height: 320px; object-position: center center; }
       .gallery-grid { grid-template-columns: 1fr 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .form-btns { flex-direction: column; }
@@ -539,6 +549,10 @@
       .hero-btns a { justify-content: center; width: 100%; }
       #discounts .discounts-grid { grid-template-columns: 1fr !important; }
       .btn-leave-review { width: 100%; justify-content: center; }
+      .emergency-banner { flex-direction: column; }
+      .emergency-banner-img { width: 100%; height: 320px; min-height: unset; }
+      .emergency-banner-img img { height: 100%; min-height: unset; }
+      .emergency-banner-body { padding: 24px 18px; }
     }
   </style>
 </head>
@@ -625,7 +639,7 @@
     <p class="section-label">What We Do</p>
     <h2 class="section-title">Our Services</h2>
     <div class="section-divider"></div>
-    <p class="section-sub">From tree removal and trimming to stump grinding and emergency services — we handle every tree care need for homes and businesses across North Texas and Southeastern Oklahoma.</p>
+    <p class="section-sub">From tree removal and trimming to stump grinding, haul off and emergency services — we handle every tree care need for homes and businesses across North Texas and Southeastern Oklahoma.</p>
 
     <div class="services-grid">
 
@@ -716,9 +730,9 @@
       <div class="service-card emergency-banner">
         <div class="emergency-banner-img">
           <img src="https://res.cloudinary.com/dfihagvyl/image/upload/f_auto,q_auto:eco,w_700,c_fill,g_auto/v1782234202/ChatGPT_Image_Jun_23_2026_12_01_40_PM_px82ev.png" alt="Emergency Tree Removal" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          <div class="emergency-tag">24/7 Emergency</div>
         </div>
         <div class="emergency-banner-body">
-          <div style="display:inline-block;background:#C0392B;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:4px 14px;border-radius:4px;margin-bottom:14px;text-transform:uppercase;">24/7 Emergency</div>
           <h3 style="font-family:'Fjalla One',sans-serif;font-size:clamp(22px,3vw,32px);color:var(--white);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;">Emergency Tree Removal</h3>
           <p style="color:rgba(255,255,255,.82);font-size:15px;line-height:1.7;margin-bottom:24px;max-width:480px;">Storm damage or fallen tree threatening your home? Kings Tree Services responds fast — 24/7 emergency tree removal across Fort Worth, Tarrant County, and all areas we serve.</p>
           <a href="#contact" class="btn-emergency">Get Emergency Help Now</a>
@@ -1250,6 +1264,9 @@
     document.querySelectorAll('#main-nav a').forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === '#' + active);
     });
+    if (window.innerWidth <= 960) {
+      document.getElementById('navbar').classList.toggle('logo-hidden', window.scrollY > 10);
+    }
   });
 
   // Lightbox
