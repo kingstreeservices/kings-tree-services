@@ -164,6 +164,14 @@
       transition: background .2s;
     }
     .nav-btn:hover { background: var(--gold-light); }
+    .nav-btn-emergency {
+      background: #C0392B; color: var(--white); font-size: 12px; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 10px 14px; border-radius: 4px; text-decoration: none; white-space: nowrap;
+      display: flex; align-items: center; gap: 6px;
+      animation: pulse-red 1.6s ease-in-out infinite;
+    }
+    .nav-btn-emergency:hover { background: #922b21; animation: none; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
 
@@ -491,6 +499,8 @@
       .nav-right .nav-phone { display: none; }
       .nav-right .nav-btn { display: none; }
       .nav-right { margin-left: auto; }
+      .nav-btn-emergency { font-size: 11px; padding: 9px 11px; gap: 0; }
+      .nav-btn-emergency span { display: none; }
       .nav-logo { left: 50%; transform: translateX(-50%); transition: opacity .25s, transform .25s; }
       #navbar.logo-hidden .nav-logo { opacity: 0; pointer-events: none; transform: translateX(-50%) scale(.85); }
 
@@ -581,6 +591,10 @@
       580-927-0421
     </a>
     <a href="#contact" class="nav-btn">Get a Free Estimate</a>
+    <a href="tel:5809270421" class="nav-btn-emergency">
+      <svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      <span>24/7 Emergency</span>
+    </a>
     <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -599,6 +613,10 @@
       <p class="hero-location">Serving Fort Worth &amp; North Texas</p>
       <p>Safe, efficient &amp; reliable tree services for residential &amp; commercial properties in Tarrant, Denton, Wise, Parker County &amp; Southeastern Oklahoma.</p>
       <div class="hero-btns">
+        <a href="tel:5809270421" class="btn-emergency">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          24/7 Emergency
+        </a>
         <a href="#contact" class="btn-gold">
           <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
           Get a Free Estimate
