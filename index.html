@@ -428,21 +428,10 @@
 
     /* ── CAREERS ── */
     #careers { background: var(--cream); padding: 90px 0; }
-    .careers-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
-    .careers-info h3 { font-family: 'Fjalla One', sans-serif; font-size: 22px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 16px; letter-spacing: .05em; }
-    .careers-info p { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px; }
-    .careers-positions { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-    .careers-positions li { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: var(--green-dark); text-transform: uppercase; letter-spacing: .06em; }
-    .careers-positions li::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-    .careers-form { background: var(--white); border-radius: 12px; padding: 40px 36px; box-shadow: 0 4px 24px rgba(0,0,0,.07); }
-    .careers-form h4 { font-family: 'Fjalla One', sans-serif; font-size: 20px; text-transform: uppercase; color: var(--green-dark); letter-spacing: .05em; margin-bottom: 24px; }
-    .file-upload-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 2px dashed rgba(28,43,26,.25); border-radius: 8px; padding: 28px 16px; cursor: pointer; transition: border-color .2s, background .2s; text-align: center; }
-    .file-upload-label:hover { border-color: var(--gold); background: rgba(196,154,60,.05); }
-    .file-upload-label svg { width: 32px; height: 32px; fill: var(--gold); }
-    .file-upload-label span { font-size: 13px; font-weight: 600; color: var(--text-mid); letter-spacing: .04em; text-transform: uppercase; }
-    .file-upload-label small { font-size: 11px; color: rgba(28,43,26,.45); }
-    #careers-file { display: none; }
-    .file-name-display { font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 6px; text-align: center; min-height: 16px; }
+    .careers-roles { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin: 40px 0 36px; }
+    .careers-role { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 100px; }
+    .careers-role svg { width: 40px; height: 40px; fill: var(--gold); }
+    .careers-role span { font-family: 'Fjalla One', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--green-dark); text-align: center; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
     .contact-info h3 {
       font-family: 'Fjalla One', sans-serif; font-size: 22px; font-weight: 700;
@@ -570,8 +559,6 @@
       .areas-inner { grid-template-columns: 1fr; gap: 32px; }
       .areas-map img { width: 100%; max-width: 320px; }
 
-      .careers-grid { grid-template-columns: 1fr; gap: 40px; }
-      .careers-form { padding: 24px 18px; }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .contact-form { padding: 24px 18px; }
 
@@ -630,7 +617,7 @@
     <a href="#projects">Projects</a>
     <a href="#reviews">Reviews</a>
     <a href="#areas">Service Areas</a>
-    <a href="#careers">Careers</a>
+    <a href="careers.html">Careers</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -1163,78 +1150,33 @@
 <!-- ═══════════ CONTACT ═══════════ -->
 <!-- ═══════════ CAREERS ═══════════ -->
 <section id="careers" aria-label="Careers — Join the Kings Tree Services Team">
-  <div class="container">
+  <div class="container" style="text-align:center;">
     <p class="section-label">Join the Team</p>
     <h2 class="section-title">Work With Us</h2>
     <div class="section-divider"></div>
-    <p class="section-sub">We're always looking for hard-working, reliable people to join our crew. If you take pride in your work and love being outdoors, we want to hear from you.</p>
-    <div class="careers-grid">
-      <div class="careers-info">
-        <h3>Open Positions</h3>
-        <ul class="careers-positions">
-          <li>Tree Climber</li>
-          <li>Groundsman</li>
-          <li>Driver</li>
-          <li>Supervisor</li>
-        </ul>
-        <p>We offer competitive pay, a great team environment, and steady work across North Texas and Southeastern Oklahoma. Experience is a plus but not always required — we train the right people.</p>
-        <p>Fill out the form and attach your resume if you have one. We'll reach out to schedule a quick conversation.</p>
+    <p class="section-sub">We're always looking for hard-working, reliable people to join our crew across North Texas and Southeastern Oklahoma. Competitive pay, great team, steady work.</p>
+    <div class="careers-roles">
+      <div class="careers-role">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>Tree Climber</span>
       </div>
-      <div class="careers-form">
-        <h4>Apply Now</h4>
-        <form action="https://formsubmit.co/kingstreeservicesllc@yahoo.com" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New Job Application — Kings Tree Services">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
-          <div class="form-row">
-            <input type="text" name="full_name" class="form-input" placeholder="Full Name" required>
-            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required>
-          </div>
-          <div class="form-row single">
-            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
-          </div>
-          <div class="form-row single">
-            <select name="position" class="form-input form-select" required>
-              <option value="" disabled selected>Position Applying For</option>
-              <option>Tree Climber</option>
-              <option>Groundsman</option>
-              <option>Driver</option>
-              <option>Supervisor</option>
-            </select>
-          </div>
-          <div class="form-row single">
-            <select name="experience" class="form-input form-select">
-              <option value="" disabled selected>Years of Experience</option>
-              <option>No experience (willing to learn)</option>
-              <option>Less than 1 year</option>
-              <option>1–3 years</option>
-              <option>3–5 years</option>
-              <option>5+ years</option>
-            </select>
-          </div>
-          <div class="form-row single">
-            <textarea name="message" class="form-textarea" placeholder="Tell us a little about yourself and why you want to join our team..."></textarea>
-          </div>
-          <div class="form-row single">
-            <label for="careers-file" class="file-upload-label">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-2 9l-3-3h2v-4h2v4h2l-3 3z"/></svg>
-              <span>Attach Resume / CV</span>
-              <small>PDF, DOC or DOCX — optional</small>
-            </label>
-            <input type="file" id="careers-file" name="resume" accept=".pdf,.doc,.docx">
-            <p class="file-name-display" id="file-name-display"></p>
-          </div>
-          <div class="form-btns">
-            <button type="submit" class="btn-gold" style="width:100%;justify-content:center;">
-              <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-              Submit Application
-            </button>
-          </div>
-          <p class="form-note">We review all applications and will contact you within 2 business days.</p>
-        </form>
+      <div class="careers-role">
+        <svg viewBox="0 0 24 24"><path d="M13 2.05V4.08c3.39.49 6 3.39 6 6.92 0 2.74-1.52 5.25-3.89 6.56l-1.11-1.93C15.9 14.72 17 12.92 17 11c0-2.76-2.24-5-5-5V4.08C8.05 4.56 5 7.42 5 11c0 1.92 1.1 3.72 2.89 4.63l-1.1 1.93C4.52 16.25 3 13.74 3 11c0-4.63 3.5-8.44 8-8.95V0l4.5 4L11 8V5.94c-.33 0-.67.02-1 .06V2.05zM12 22l-4.5-4 4.5-4v2.06c.33-.04.67-.06 1-.06 1.1 0 2.15.23 3.11.64V14.5l1.11 1.93C16.48 17.35 15 19.55 15 22h-3z"/></svg>
+        <span>Groundsman</span>
+      </div>
+      <div class="careers-role">
+        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        <span>Driver</span>
+      </div>
+      <div class="careers-role">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        <span>Supervisor</span>
       </div>
     </div>
+    <a href="careers.html" class="btn-gold" style="display:inline-flex;margin-top:8px;">
+      <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      View Open Positions & Apply
+    </a>
   </div>
 </section>
 
@@ -1340,7 +1282,7 @@
           <a href="#projects">Project Gallery</a>
           <a href="#reviews">Reviews</a>
           <a href="#areas">Service Areas</a>
-          <a href="#careers">Careers</a>
+          <a href="careers.html">Careers</a>
           <a href="#contact">Contact Us</a>
         </div>
       </div>
