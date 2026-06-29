@@ -105,8 +105,9 @@
       #main-nav { display: none; margin-left: 0; }
       #main-nav.open { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--green-dark); justify-content: center; align-items: center; gap: 0; z-index: 999; padding: 80px 32px 32px; }
       #main-nav.open a { font-size: 20px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.08); width: 100%; text-align: center; }
-      .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); }
+      .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); transition: opacity .25s, transform .25s; }
       .nav-logo img { height: 80px; }
+      #navbar.logo-hidden .nav-logo { opacity: 0; pointer-events: none; transform: translateX(-50%) scale(.85); }
       .nav-phone { display: none; }
       .hamburger { display: flex; }
       .apply-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -351,6 +352,9 @@
   function toggleNav() {
     document.getElementById('main-nav').classList.toggle('open');
   }
+  window.addEventListener('scroll', function() {
+    document.getElementById('navbar').classList.toggle('logo-hidden', window.scrollY > 10);
+  });
   var careersFile = document.getElementById('careers-file');
   if (careersFile) {
     careersFile.addEventListener('change', function() {
