@@ -1216,14 +1216,18 @@
 
       <div class="contact-form">
         <h3>Request a Free Estimate</h3>
-        <form onsubmit="submitForm(event)">
+        <form action="https://formsubmit.co/kingstreeservicesllc@yahoo.com" method="POST">
+          <input type="hidden" name="_subject" value="New Free Estimate Request — Kings Tree Services">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
           <div class="form-row">
-            <input type="text" class="form-input" placeholder="Full Name" required />
-            <input type="tel" class="form-input" placeholder="Phone Number" required />
+            <input type="text" name="full_name" class="form-input" placeholder="Full Name" required />
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
           </div>
           <div class="form-row">
-            <input type="email" class="form-input" placeholder="Email Address" required />
-            <select class="form-select">
+            <input type="email" name="email" class="form-input" placeholder="Email Address" required />
+            <select name="service" class="form-select">
               <option value="" disabled selected>Service Needed</option>
               <option>Tree Removal</option>
               <option>Tree Trimming</option>
@@ -1236,10 +1240,10 @@
             </select>
           </div>
           <div class="form-row single">
-            <input type="text" class="form-input" placeholder="Property Address" />
+            <input type="text" name="address" class="form-input" placeholder="Property Address" />
           </div>
           <div class="form-row single">
-            <textarea class="form-textarea" placeholder="Tell us more about your project..."></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Tell us more about your project..."></textarea>
           </div>
           <div class="form-btns">
             <button type="submit" class="btn-gold">
