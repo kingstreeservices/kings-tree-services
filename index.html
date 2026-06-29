@@ -130,8 +130,8 @@
     #navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: var(--green-dark);
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px; padding: 0 32px 0 148px; gap: 16px;
+      display: flex; align-items: center;
+      height: 64px; padding: 0 32px;
       box-shadow: 0 2px 16px rgba(0,0,0,.5);
       overflow: visible;
     }
@@ -144,14 +144,14 @@
       box-shadow: 0 6px 20px rgba(0,0,0,.45);
     }
     .nav-logo img { height: 125px; width: auto; display: block; }
-    #main-nav { display: flex; align-items: center; gap: 4px; flex: 1; justify-content: center; flex-wrap: wrap; }
+    #main-nav { display: flex; align-items: center; gap: 4px; justify-content: center; flex-wrap: wrap; position: absolute; left: 50%; transform: translateX(-50%); }
     #main-nav a {
       color: rgba(255,255,255,.85); text-decoration: none; font-size: 12px; font-weight: 600;
       letter-spacing: .07em; text-transform: uppercase; padding: 6px 10px;
       border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
     }
     #main-nav a:hover, #main-nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
-    .nav-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .nav-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; margin-left: auto; }
     .nav-phone {
       color: var(--gold); font-size: 13px; font-weight: 700;
       text-decoration: none; display: flex; align-items: center; gap: 6px; white-space: nowrap;
