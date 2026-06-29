@@ -1348,12 +1348,6 @@
   let cur = 0;
   setInterval(() => { cur = (cur + 1) % reviews.length; showReview(cur); }, 5000);
 
-  function submitForm(e) {
-    e.preventDefault();
-    alert('Thank you! We will contact you shortly to confirm your free estimate.');
-    e.target.reset();
-  }
-
   window.addEventListener('scroll', () => {
     let active = '';
     document.querySelectorAll('section[id]').forEach(s => {
