@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tree Service Locations | Kings Tree Services LLC — North Texas & Oklahoma</title>
+  <meta name="description" content="Kings Tree Services provides professional tree removal, trimming, stump grinding and emergency services across North Texas and Southeastern Oklahoma. Find your city." />
+  <link rel="canonical" href="https://www.kingstreeservicesllc.com/locations" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600;700&display=block" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green-dark: #1C2B1A; --green-mid: #243620; --gold: #C49A3C; --cream: #F5F0E6; --cream-dark: #EDE6D6; --white: #FFFFFF; --text-dark: #1A1A1A; --text-mid: #4A4A4A; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text-dark); background: var(--white); padding-top: 64px; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
+    @keyframes pulse-red { 0%,100%{box-shadow:0 0 0 0 rgba(192,57,43,.55)} 50%{box-shadow:0 0 0 7px rgba(192,57,43,0)} }
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--green-dark); display: flex; align-items: center; height: 64px; padding: 0 32px; box-shadow: 0 2px 16px rgba(0,0,0,.5); overflow: visible; }
+    .nav-logo { width: 138px; height: 138px; border-radius: 50%; background: var(--green-dark); display: flex; align-items: center; justify-content: center; position: absolute; left: 54px; top: 2px; z-index: 1001; box-shadow: 0 6px 20px rgba(0,0,0,.45); text-decoration: none; }
+    .nav-logo img { height: 125px; width: auto; display: block; }
+    #main-nav { display: flex; align-items: center; gap: 4px; justify-content: center; flex-wrap: wrap; position: absolute; left: 50%; transform: translateX(-50%); }
+    #main-nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; padding: 6px 10px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    #main-nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+    .nav-phone { color: var(--gold); font-size: 13px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .nav-btn-emergency { background: #C0392B; color: var(--white); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 10px 14px; border-radius: 4px; text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 6px; animation: pulse-red 1.6s ease-in-out infinite; }
+    .nav-btn-emergency:hover { background: #922b21; animation: none; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+    .page-hero { background: var(--green-dark); padding: 56px 0 48px; text-align: center; }
+    .breadcrumb { font-size: 13px; color: rgba(255,255,255,.5); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .page-hero h1 { font-family: 'Fjalla One', sans-serif; font-size: clamp(26px, 5vw, 44px); text-transform: uppercase; color: var(--white); letter-spacing: .04em; margin-bottom: 12px; }
+    .page-hero p { font-size: 16px; color: rgba(255,255,255,.75); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+    .locations-section { background: var(--cream); padding: 64px 0; }
+    .county-group { margin-bottom: 48px; }
+    .county-title { font-family: 'Fjalla One', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .city-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .city-card { background: var(--white); border-radius: 8px; padding: 16px 18px; text-decoration: none; display: block; transition: box-shadow .2s, transform .2s; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .city-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.12); transform: translateY(-2px); }
+    .city-card h3 { font-family: 'Fjalla One', sans-serif; font-size: 15px; text-transform: uppercase; color: var(--green-dark); letter-spacing: .04em; margin-bottom: 4px; }
+    .city-card p { font-size: 12px; color: var(--text-mid); }
+    .cta-section { background: var(--green-dark); padding: 56px 0; text-align: center; }
+    .cta-section h2 { font-family: 'Fjalla One', sans-serif; font-size: clamp(22px, 4vw, 36px); text-transform: uppercase; color: var(--white); letter-spacing: .04em; margin-bottom: 12px; }
+    .cta-section p { font-size: 15px; color: rgba(255,255,255,.75); margin-bottom: 28px; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--white); font-family: 'Fjalla One', sans-serif; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding: 14px 28px; border-radius: 4px; text-decoration: none; transition: background .2s; }
+    .btn-gold:hover { background: #a8832e; }
+    footer { background: var(--green-dark); border-top: 1px solid rgba(255,255,255,.1); padding: 28px 0; text-align: center; }
+    footer p { font-size: 13px; color: rgba(255,255,255,.4); }
+    footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    @media (max-width: 960px) {
+      #navbar { padding: 10px 16px; }
+      #main-nav { display: none; }
+      #main-nav.open { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--green-dark); justify-content: center; align-items: center; z-index: 999; gap: 0; padding: 80px 32px; }
+      #main-nav.open a { font-size: 20px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.1); width: 100%; text-align: center; }
+      .nav-logo { position: absolute; left: 50%; transform: translateX(-50%); width: auto; height: auto; background: none; box-shadow: none; border-radius: 0; top: 8px; }
+      .nav-logo img { height: 48px; }
+      .hamburger { display: flex; z-index: 1001; position: relative; }
+      .nav-right .nav-phone { display: none; }
+      .nav-right { margin-left: auto; }
+      .city-grid { grid-template-columns: repeat(2, 1fr); }
+      .container { padding: 0 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <a href="/" class="nav-logo">
+    <img src="https://res.cloudinary.com/dfihagvyl/image/upload/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" alt="Kings Tree Services" />
+  </a>
+  <nav id="main-nav">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#reviews">Reviews</a>
+    <a href="/#areas" class="active">Service Areas</a>
+    <a href="/careers">Careers</a>
+  </nav>
+  <div class="nav-right">
+    <a href="tel:5809270421" class="nav-phone">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--gold)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      580-927-0421
+    </a>
+    <a href="tel:5809270421" class="nav-btn-emergency">
+      <svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      <span>24/7 Emergency</span>
+    </a>
+    <button class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="/">Home</a> › Service Areas</p>
+    <h1>Tree Services Near You</h1>
+    <p>Kings Tree Services covers Fort Worth, all of North Texas, and Southeastern Oklahoma. Select your city for local pricing and availability.</p>
+  </div>
+</div>
+
+<section class="locations-section">
+  <div class="container">
+
+    <div class="county-group">
+      <p class="county-title">Tarrant County, TX</p>
+      <div class="city-grid">
+        <a href="/locations/fort-worth-tx" class="city-card"><h3>Fort Worth</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/arlington-tx" class="city-card"><h3>Arlington</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/mansfield-tx" class="city-card"><h3>Mansfield</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/grapevine-tx" class="city-card"><h3>Grapevine</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/keller-tx" class="city-card"><h3>Keller</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/southlake-tx" class="city-card"><h3>Southlake</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/colleyville-tx" class="city-card"><h3>Colleyville</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/hurst-tx" class="city-card"><h3>Hurst</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/euless-tx" class="city-card"><h3>Euless</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/bedford-tx" class="city-card"><h3>Bedford</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/north-richland-hills-tx" class="city-card"><h3>N. Richland Hills</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/burleson-tx" class="city-card"><h3>Burleson</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/crowley-tx" class="city-card"><h3>Crowley</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/azle-tx" class="city-card"><h3>Azle</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/saginaw-tx" class="city-card"><h3>Saginaw</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/watauga-tx" class="city-card"><h3>Watauga</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/haltom-city-tx" class="city-card"><h3>Haltom City</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/kennedale-tx" class="city-card"><h3>Kennedale</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/white-settlement-tx" class="city-card"><h3>White Settlement</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/lake-worth-tx" class="city-card"><h3>Lake Worth</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/richland-hills-tx" class="city-card"><h3>Richland Hills</h3><p>Tarrant County, TX</p></a>
+        <a href="/locations/river-oaks-tx" class="city-card"><h3>River Oaks</h3><p>Tarrant County, TX</p></a>
+      </div>
+    </div>
+
+    <div class="county-group">
+      <p class="county-title">Denton County, TX</p>
+      <div class="city-grid">
+        <a href="/locations/denton-tx" class="city-card"><h3>Denton</h3><p>Denton County, TX</p></a>
+        <a href="/locations/lewisville-tx" class="city-card"><h3>Lewisville</h3><p>Denton County, TX</p></a>
+        <a href="/locations/flower-mound-tx" class="city-card"><h3>Flower Mound</h3><p>Denton County, TX</p></a>
+        <a href="/locations/coppell-tx" class="city-card"><h3>Coppell</h3><p>Denton County, TX</p></a>
+        <a href="/locations/highland-village-tx" class="city-card"><h3>Highland Village</h3><p>Denton County, TX</p></a>
+        <a href="/locations/argyle-tx" class="city-card"><h3>Argyle</h3><p>Denton County, TX</p></a>
+        <a href="/locations/roanoke-tx" class="city-card"><h3>Roanoke</h3><p>Denton County, TX</p></a>
+        <a href="/locations/trophy-club-tx" class="city-card"><h3>Trophy Club</h3><p>Denton County, TX</p></a>
+        <a href="/locations/little-elm-tx" class="city-card"><h3>Little Elm</h3><p>Denton County, TX</p></a>
+        <a href="/locations/aubrey-tx" class="city-card"><h3>Aubrey</h3><p>Denton County, TX</p></a>
+        <a href="/locations/corinth-tx" class="city-card"><h3>Corinth</h3><p>Denton County, TX</p></a>
+        <a href="/locations/lake-dallas-tx" class="city-card"><h3>Lake Dallas</h3><p>Denton County, TX</p></a>
+      </div>
+    </div>
+
+    <div class="county-group">
+      <p class="county-title">Parker County, TX</p>
+      <div class="city-grid">
+        <a href="/locations/weatherford-tx" class="city-card"><h3>Weatherford</h3><p>Parker County, TX</p></a>
+        <a href="/locations/aledo-tx" class="city-card"><h3>Aledo</h3><p>Parker County, TX</p></a>
+        <a href="/locations/willow-park-tx" class="city-card"><h3>Willow Park</h3><p>Parker County, TX</p></a>
+        <a href="/locations/hudson-oaks-tx" class="city-card"><h3>Hudson Oaks</h3><p>Parker County, TX</p></a>
+        <a href="/locations/mineral-wells-tx" class="city-card"><h3>Mineral Wells</h3><p>Parker County, TX</p></a>
+        <a href="/locations/springtown-tx" class="city-card"><h3>Springtown</h3><p>Parker County, TX</p></a>
+      </div>
+    </div>
+
+    <div class="county-group">
+      <p class="county-title">Wise County, TX</p>
+      <div class="city-grid">
+        <a href="/locations/decatur-tx" class="city-card"><h3>Decatur</h3><p>Wise County, TX</p></a>
+        <a href="/locations/bridgeport-tx" class="city-card"><h3>Bridgeport</h3><p>Wise County, TX</p></a>
+        <a href="/locations/rhome-tx" class="city-card"><h3>Rhome</h3><p>Wise County, TX</p></a>
+        <a href="/locations/newark-tx" class="city-card"><h3>Newark</h3><p>Wise County, TX</p></a>
+        <a href="/locations/boyd-tx" class="city-card"><h3>Boyd</h3><p>Wise County, TX</p></a>
+        <a href="/locations/alvord-tx" class="city-card"><h3>Alvord</h3><p>Wise County, TX</p></a>
+        <a href="/locations/chico-tx" class="city-card"><h3>Chico</h3><p>Wise County, TX</p></a>
+      </div>
+    </div>
+
+    <div class="county-group">
+      <p class="county-title">Southeastern Oklahoma</p>
+      <div class="city-grid">
+        <a href="/locations/durant-ok" class="city-card"><h3>Durant</h3><p>Bryan County, OK</p></a>
+        <a href="/locations/ardmore-ok" class="city-card"><h3>Ardmore</h3><p>Carter County, OK</p></a>
+        <a href="/locations/ada-ok" class="city-card"><h3>Ada</h3><p>Pontotoc County, OK</p></a>
+        <a href="/locations/sulphur-ok" class="city-card"><h3>Sulphur</h3><p>Murray County, OK</p></a>
+        <a href="/locations/tishomingo-ok" class="city-card"><h3>Tishomingo</h3><p>Johnston County, OK</p></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Don't See Your City?</h2>
+    <p>We likely serve your area. Call us and we'll confirm availability.</p>
+    <a href="tel:5809270421" class="btn-gold">
+      <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call 580-927-0421
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Kings Tree Services, LLC &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/locations">All Locations</a> &nbsp;·&nbsp; <a href="tel:5809270421">580-927-0421</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

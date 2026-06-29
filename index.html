@@ -1401,11 +1401,10 @@
         <h5>Quick Links</h5>
         <div class="footer-links">
           <a href="#services">Our Services</a>
-          <a href="#why">Why Choose Us</a>
-          <a href="#process">Our Process</a>
           <a href="#projects">Project Gallery</a>
           <a href="#reviews">Reviews</a>
           <a href="#areas">Service Areas</a>
+          <a href="/locations">All Locations</a>
           <a href="careers.html">Careers</a>
           <a href="#contact">Contact Us</a>
         </div>
@@ -1451,6 +1450,19 @@
 
 
 <script>
+  // Show success message after form submission
+  if (window.location.search.includes('submitted=true')) {
+    var contact = document.querySelector('#contact');
+    if (contact) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'background:#1C2B1A;color:#fff;text-align:center;padding:20px 32px;font-family:Fjalla One,sans-serif;font-size:16px;letter-spacing:.05em;border-bottom:3px solid #C49A3C;';
+      banner.innerHTML = '✓ &nbsp; THANK YOU! WE RECEIVED YOUR REQUEST AND WILL CONTACT YOU SHORTLY.';
+      document.body.insertBefore(banner, document.body.firstChild);
+      contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState({}, '', '/');
+    }
+  }
+
   function toggleNav() {
     document.getElementById('main-nav').classList.toggle('open');
   }
