@@ -21,17 +21,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "Kings Tree Services, LLC",
-    "description": "Professional tree removal, trimming, stump grinding, tree planting, cable bracing, mistletoe removal and emergency tree services. Serving Tarrant, Denton, Wise and Parker County TX and Southeastern Oklahoma.",
+    "description": "Professional tree removal, trimming, stump grinding, tree planting, cable bracing, mistletoe removal and 24/7 emergency tree services. Serving Fort Worth, Tarrant, Denton, Wise and Parker County TX and Southeastern Oklahoma. Fully insured. Free estimates.",
     "telephone": "+15809270421",
     "email": "kingstreeservicesllc@yahoo.com",
-    "url": "https://www.kingstreeservices.com/",
+    "url": "https://kings-tree-services.vercel.app/",
     "logo": "https://res.cloudinary.com/dfihagvyl/image/upload/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png",
     "image": "https://res.cloudinary.com/dfihagvyl/image/upload/v1782745089/1136C7D8-2F27-4004-A8C8-44B62CBF7355_axafyf.png",
     "priceRange": "$$",
     "openingHours": "Mo-Su 00:00-23:59",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fort Worth",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.7555,
+      "longitude": -97.3308
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "7",
+      "bestRating": "5"
+    },
     "areaServed": [
+      { "@type": "City", "name": "Fort Worth", "addressRegion": "TX" },
       { "@type": "AdministrativeArea", "name": "Tarrant County, TX" },
       { "@type": "AdministrativeArea", "name": "Denton County, TX" },
       { "@type": "AdministrativeArea", "name": "Wise County, TX" },
@@ -42,16 +60,81 @@
       "@type": "OfferCatalog",
       "name": "Tree Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Removal" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Trimming" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stump Grinding" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Planting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable Bracing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mistletoe Removal" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Tree Removal" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Removal", "description": "Safe, complete tree removal with haul-off for residential and commercial properties in Fort Worth and North Texas." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Trimming & Pruning", "description": "Expert trimming and pruning to improve tree health, appearance, and safety." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stump Grinding & Removal", "description": "Complete stump grinding and removal to reclaim your landscape." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Planting", "description": "Professional tree planting to enhance property value and curb appeal." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable Bracing", "description": "Structural cable bracing systems to support and protect valuable trees." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mistletoe Removal", "description": "Protect tree health by removing parasitic mistletoe growth." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Tree Removal", "description": "24/7 emergency tree removal for storm damage, fallen trees, and hazardous situations across Fort Worth and Tarrant County." } }
       ]
     },
     "sameAs": ["https://www.facebook.com/share/1bBuSG9hyu/"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer free estimates for tree removal in Fort Worth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Kings Tree Services offers free, no-obligation estimates for all tree services including tree removal, trimming, stump grinding, and emergency services. Call or text 580-927-0421 to schedule your free estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer 24/7 emergency tree removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Kings Tree Services provides 24/7 emergency tree removal across Fort Worth, Tarrant County, and all surrounding areas. Call 580-927-0421 any time for immediate emergency assistance with fallen or hazardous trees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do Kings Tree Services serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kings Tree Services serves Fort Worth and North Texas including Tarrant County, Denton County, Wise County, Parker County, and Southeastern Oklahoma. Call 580-927-0421 to confirm service in your area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Kings Tree Services licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Kings Tree Services, LLC is fully insured for all residential and commercial tree services. We provide professional tree care with complete liability coverage for your peace of mind."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tree services do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kings Tree Services offers tree removal, tree trimming and pruning, stump grinding and removal, tree planting, cable bracing, mistletoe removal, and 24/7 emergency tree removal. All services are available for residential and commercial properties across North Texas and Southeastern Oklahoma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does tree removal cost in Fort Worth TX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tree removal costs in Fort Worth vary based on tree size, location, and complexity. Kings Tree Services offers competitive, quote-based pricing with free estimates. Call 580-927-0421 for a free, no-obligation estimate tailored to your specific situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you remove tree debris after cutting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, complete debris haul-off is included with Kings Tree Services tree removal. We leave your property clean and clear after every job."
+        }
+      }
+    ]
   }
   </script>
 
