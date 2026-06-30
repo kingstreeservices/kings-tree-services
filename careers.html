@@ -225,7 +225,6 @@
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://www.kingstreeservicesllc.com/careers.html?applied=true">
           <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_cc" value="5809270421@vtext.com">
           <div class="form-row">
             <input type="text" name="full_name" class="form-input" placeholder="Full Name" required>
             <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required>
@@ -364,6 +363,22 @@
       display.textContent = this.files.length ? '📎 ' + this.files[0].name : '';
     });
   }
+  // SMS ping via separate urlencoded request (file uploads break _cc in multipart forms)
+  var careersForm = document.querySelector('form[action*="formsubmit.co"]');
+  if (careersForm) {
+    careersForm.addEventListener('submit', function() {
+      var ping = new URLSearchParams({
+        full_name: (careersForm.querySelector('[name="full_name"]') || {}).value || '',
+        phone: (careersForm.querySelector('[name="phone"]') || {}).value || '',
+        position: (careersForm.querySelector('[name="position"]') || {}).value || '',
+        _subject: 'New Job Application — Kings Tree Services',
+        _captcha: 'false',
+        _cc: '5809270421@vtext.com'
+      });
+      navigator.sendBeacon('https://formsubmit.co/kingstreeservicesllc@yahoo.com', ping);
+    });
+  }
+
   // Show success message if redirected back after submission
   if (window.location.search.includes('applied=true')) {
     var form = document.querySelector('.apply-form');
