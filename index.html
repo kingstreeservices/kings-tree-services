@@ -24,6 +24,7 @@
   <meta name="twitter:title" content="Tree Services in North Texas and Southeastern Oklahoma | Kings Tree Services" />
   <meta name="twitter:description" content="Professional tree removal, trimming, stump grinding and 24/7 emergency services across North Texas and Southeastern Oklahoma. Fully insured. Free estimates. Call 580-927-0421." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dfihagvyl/image/upload/v1782745089/1136C7D8-2F27-4004-A8C8-44B62CBF7355_axafyf.png" />
+  <meta name="twitter:image:alt" content="Kings Tree Services crew at work in Fort Worth, TX" />
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_32,h_32,c_fill/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_180,h_180,c_fill,b_rgb:1C2B1A/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
@@ -158,6 +159,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -279,11 +281,14 @@
     /* ── HERO ── */
     #hero {
       position: relative; height: 100vh; min-height: 600px; overflow: hidden;
-      background: linear-gradient(to right, rgba(15,25,13,.92) 38%, rgba(15,25,13,.55) 65%, rgba(15,25,13,.2) 100%);
       display: flex; align-items: center;
       padding: 0;
     }
     .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+    #hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(to right, rgba(15,25,13,.92) 38%, rgba(15,25,13,.55) 65%, rgba(15,25,13,.2) 100%);
+    }
     #hero .container { width: 100%; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; padding-top: 80px; padding-bottom: 60px; position: relative; z-index: 2; }
     .hero-inner { max-width: 620px; width: 100%; transform: translateY(5vh); }
     .hero-inner h1 {
@@ -640,8 +645,10 @@
 
       #hero {
         height: 100svh; min-height: 580px; overflow: hidden;
-        background: linear-gradient(to top, rgba(15,25,13,.97) 0%, rgba(15,25,13,.7) 45%, rgba(15,25,13,.15) 75%, transparent 100%);
         align-items: flex-end; justify-content: flex-end;
+      }
+      #hero::before {
+        background: linear-gradient(to top, rgba(15,25,13,.97) 0%, rgba(15,25,13,.7) 45%, rgba(15,25,13,.15) 75%, transparent 100%);
       }
       .hero-bg { object-position: center 25%; }
       #hero .container { flex-direction: column; justify-content: flex-end; align-items: flex-start; padding-top: 0; padding-bottom: 30px; gap: 0; }
