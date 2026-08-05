@@ -26,8 +26,8 @@
   <meta name="twitter:image" content="https://res.cloudinary.com/dfihagvyl/image/upload/v1782745089/1136C7D8-2F27-4004-A8C8-44B62CBF7355_axafyf.png" />
   <meta name="twitter:image:alt" content="Kings Tree Services crew at work in Fort Worth, TX" />
   <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_32,h_32,c_fill/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_180,h_180,c_fill,b_rgb:1C2B1A/e_background_removal/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_32,h_32,c_fill/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dfihagvyl/image/upload/w_180,h_180,c_fill/ChatGPT_Image_Jun_23_2026_12_56_43_PM_rsafvf.png" />
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="https://res.cloudinary.com/dfihagvyl/image/upload/f_auto,q_auto:eco/v1782745529/HERO_desktop_aex4hp.png" media="(min-width: 961px)" />
   <link rel="preload" as="image" href="https://res.cloudinary.com/dfihagvyl/image/upload/f_auto,q_auto:eco/v1782745530/Hero_Mobile_txvgk5.png" media="(max-width: 960px)" />
@@ -1508,21 +1508,6 @@
   function toggleNav() {
     document.getElementById('main-nav').classList.toggle('open');
   }
-
-  const reviews = [
-    { quote: '"This company did more than expected. My very large Elm tree had split — a huge part fell into my neighbor\'s yard. They removed it as well as my own tree. Everything cleaned up, reasonable price, on time, and done in half a day. I would recommend them for any tree work."', cite: '– Jeannie P., ⭐⭐⭐⭐⭐' },
-    { quote: '"Saw their work across the street and asked them to come talk to us. David King planned everything at a fair price, came with his crew and worked very hard. Didn\'t leave till everything was to our satisfaction. These guys are like the Energizer Bunnies! Amazing job!"', cite: '– Angel C., ⭐⭐⭐⭐⭐' },
-    { quote: '"Received a quick response for a quote to remove and replace my front yard tree. They came out 2 days later and got it done quickly and on time. Great responsiveness to my calls and texts. Highly recommend!"', cite: '– Tyler R., ⭐⭐⭐⭐⭐' },
-  ];
-
-  function showReview(i) {
-    const t = document.getElementById('testimonial-display');
-    t.innerHTML = `<blockquote>${reviews[i].quote}</blockquote><cite>${reviews[i].cite}</cite>`;
-    document.querySelectorAll('.review-dot').forEach((d, j) => d.classList.toggle('active', i === j));
-  }
-
-  let cur = 0;
-  setInterval(() => { cur = (cur + 1) % reviews.length; showReview(cur); }, 5000);
 
   window.addEventListener('scroll', () => {
     let active = '';
