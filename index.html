@@ -646,6 +646,8 @@
         padding: 80px 32px 32px; transform: none;
       }
       #main-nav.open a { font-size: 20px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.1); width: 100%; text-align: center; }
+      #nav-close { display: none; }
+      #main-nav.open #nav-close { display: flex; position: absolute; top: 20px; right: 20px; background: none; border: none; cursor: pointer; padding: 8px; color: var(--white); }
       .hamburger { display: flex; z-index: 1001; position: relative; }
       .nav-right .nav-phone { display: none; }
       .nav-right .nav-btn { display: none; }
@@ -821,6 +823,9 @@
   </div>
 
   <nav id="main-nav">
+    <button id="nav-close" onclick="toggleNav()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
     <a href="#hero">Home</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
@@ -1665,8 +1670,16 @@
   }
 
   function toggleNav() {
-    document.getElementById('main-nav').classList.toggle('open');
+    var nav = document.getElementById('main-nav');
+    nav.classList.toggle('open');
   }
+
+  // Close mobile menu when any nav link is clicked
+  document.querySelectorAll('#main-nav a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('main-nav').classList.remove('open');
+    });
+  });
 
   window.addEventListener('scroll', () => {
     let active = '';
